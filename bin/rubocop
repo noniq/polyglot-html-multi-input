@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+rubocop _0.58.1_ "$@"

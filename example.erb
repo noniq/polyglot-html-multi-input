@@ -1,0 +1,18 @@
+<h1><%= @implementation %></h1>
+<form action="" method="post">
+  <label>
+    This textarea should remain unaffected.
+    <textarea name="data[text1]"><%= @data['text1'] %></textarea>
+  </label>
+  <label>
+    This textarea should be converted into a multi-input.
+    <textarea name="data[text2]" data-multi-input><%= @data['text2'] %></textarea>
+  </label>
+  <label>
+    And this empty one too.
+    <textarea name="data[text3]" data-multi-input><%= @data['text3'] %></textarea>
+  </label>
+  <button>Submit</button> or <a href="">reset form</a>.
+</form>
+<hr>
+<a href="/">Back to index</a>

@@ -1,0 +1,8 @@
+<h2>Available implementations</h2>
+<ul>
+  <% @implementations.each do |implementation| %>
+    <li><a href="/<%= implementation %>/"><%= implementation %></a></li>
+  <% end %>
+</ul>
+<hr>
+<%= @readme %>

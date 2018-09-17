@@ -1,0 +1,10 @@
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script src="https://unpkg.com/sugar@1.5.0/sugar.min.js"></script>
+<script src="build/multi-input.js"></script>
+<script type="text/javascript">
+  $(function() {
+    $("[data-multi-input]").each(function() {
+      new MultiInput($(this));
+    })
+  })
+</script>
