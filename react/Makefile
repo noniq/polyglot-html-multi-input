@@ -1,0 +1,2 @@
+default:
+	yarn prod
