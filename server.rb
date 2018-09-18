@@ -17,7 +17,6 @@ helpers do
   def render_example
     @implementation = implementation
     @component = File.read("#{@implementation}/component.html")
-    Dir.chdir(@implementation){ puts `make` }
     erb :example
   end
 end
@@ -40,6 +39,16 @@ end
 post '/:implementation/' do
   @data = params['data']
   render_example
+end
+
+post '/:implementation/rebuild' do
+  @implementation = implementation
+  Dir.chdir(@implementation) do
+    puts "Rebuilding in #{@implementation}:"
+    puts `make`
+    puts "----------------------"
+  end
+  redirect "/#{@implementation}/"
 end
 
 get '/:implementation/*' do
